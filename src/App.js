@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './App.css'
+import './stock-return-calc-app.css'
 
 export default class App extends Component {
   constructor(props) {
@@ -45,24 +45,24 @@ export default class App extends Component {
           <table>
             <tbody>
               <tr>
-                <td>Initial Share Price (P<sub>0</sub>)</td>
-                <td></td>
-                <td><input type="text" name="initialPrice" id="initialPrice" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
+                <td className="stock-return-calc-td">Initial Share Price (P<sub>0</sub>)</td>
+                <td className="stock-return-calc-td"></td>
+                <td className="stock-return-calc-td"><input className="stock-return-calc-input" type="text" name="initialPrice" id="initialPrice" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
               </tr>
               <tr>
-                <td>Ending Share Price (P<sub>1</sub>)</td>
-                <td></td>
-                <td><input type="text" name="endingPrice" id="endingPrice" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
+                <td className="stock-return-calc-td">Ending Share Price (P<sub>1</sub>)</td>
+                <td className="stock-return-calc-td"></td>
+                <td className="stock-return-calc-td"><input className="stock-return-calc-input" type="text" name="endingPrice" id="endingPrice" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
               </tr>
               <tr>
-                <td>Dividend (D)</td>
-                <td></td>
-                <td><input type="text" name="dividend" id="dividend" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
+                <td className="stock-return-calc-td">Dividend (D)</td>
+                <td className="stock-return-calc-td"></td>
+                <td className="stock-return-calc-td"><input className="stock-return-calc-input" type="text" name="dividend" id="dividend" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
               </tr>
               <tr>
-                <td></td>
-                <td>=</td>
-                <td><div style={{ backgroundColor: '#fff', color: '#000', padding: 5 }} id="result">0.000%</div></td>
+                <td className="stock-return-calc-td"></td>
+                <td className="stock-return-calc-td">=</td>
+                <td className="stock-return-calc-td"><div style={{ backgroundColor: '#fff', color: '#000', padding: 5 }} id="result">0.000%</div></td>
               </tr>
             </tbody>
           </table>
@@ -71,23 +71,23 @@ export default class App extends Component {
           <table>
             <tbody>
               <tr>
-                <td></td>
-                <td></td>
-                <td>${this.state.endingPrice.toFixed(2)}</td>
-                <td>-</td>
-                <td>${this.state.initialPrice.toFixed(2)}</td>
-                <td>+</td>
-                <td>${this.state.dividend.toFixed(2)}</td>
-                <td></td>
+                <td className="stock-return-calc-td"></td>
+                <td className="stock-return-calc-td"></td>
+                <td className="stock-return-calc-td">${this.state.endingPrice.toFixed(2)}</td>
+                <td className="stock-return-calc-td">-</td>
+                <td className="stock-return-calc-td">${this.state.initialPrice.toFixed(2)}</td>
+                <td className="stock-return-calc-td">+</td>
+                <td className="stock-return-calc-td">${this.state.dividend.toFixed(2)}</td>
+                <td className="stock-return-calc-td"></td>
               </tr>
               <tr>
-                <td>=</td>
-                <td colSpan="7"><hr color="#000" /></td>
+                <td className="stock-return-calc-td">=</td>
+                <td className="stock-return-calc-td" colSpan="7"><hr color="#000" /></td>
               </tr>
               <tr>
-                <td colSpan="3"></td>
-                <td colSpan="3">${this.state.initialPrice.toFixed(2)}</td>
-                <td colSpan="2"></td>
+                <td className="stock-return-calc-td" colSpan="3"></td>
+                <td className="stock-return-calc-td" colSpan="3">${this.state.initialPrice.toFixed(2)}</td>
+                <td className="stock-return-calc-td" colSpan="2"></td>
               </tr>
             </tbody>
           </table>
