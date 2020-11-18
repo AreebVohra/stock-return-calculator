@@ -44,17 +44,17 @@ export default class App extends Component {
               <tr>
                 <td>Initial Share Price (P<sub>0</sub>)</td>
                 <td></td>
-                <td><input type="text" name="initialPrice" value={this.state.initialPrice.toFixed(2)} onChange={this.myChangeHandler} /></td>
+                <td><input type="text" name="initialPrice" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
               </tr>
               <tr>
                 <td>Ending Share Price (P<sub>1</sub>)</td>
                 <td></td>
-                <td><input type="text" name="endingPrice" value={this.state.endingPrice.toFixed(2)} onChange={this.myChangeHandler} /></td>
+                <td><input type="text" name="endingPrice" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
               </tr>
               <tr>
                 <td>Dividend (D)</td>
                 <td></td>
-                <td><input type="text" name="dividend" value={this.state.dividend.toFixed(2)} onChange={this.myChangeHandler} /></td>
+                <td><input type="text" name="dividend" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
               </tr>
               <tr>
                 <td></td>
