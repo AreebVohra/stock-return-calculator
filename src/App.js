@@ -13,6 +13,7 @@ export default class App extends Component {
   }
 
   myChangeHandler = (event) => {
+
     let nam = event.target.name;
     let val = parseFloat(event.target.value);
     if (isNaN(val)) {
@@ -20,6 +21,8 @@ export default class App extends Component {
     } else {
       this.setState({ [nam]: val });
     }
+
+    document.getElementById(event.target.name).value = val.toFixed(2);
   }
 
   componentDidUpdate = () => {
@@ -44,17 +47,17 @@ export default class App extends Component {
               <tr>
                 <td>Initial Share Price (P<sub>0</sub>)</td>
                 <td></td>
-                <td><input type="text" name="initialPrice" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
+                <td><input type="text" name="initialPrice" id="initialPrice" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
               </tr>
               <tr>
                 <td>Ending Share Price (P<sub>1</sub>)</td>
                 <td></td>
-                <td><input type="text" name="endingPrice" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
+                <td><input type="text" name="endingPrice" id="endingPrice" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
               </tr>
               <tr>
                 <td>Dividend (D)</td>
                 <td></td>
-                <td><input type="text" name="dividend" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
+                <td><input type="text" name="dividend" id="dividend" placeholder={'0.00'} onBlur={this.myChangeHandler} /></td>
               </tr>
               <tr>
                 <td></td>
@@ -70,11 +73,11 @@ export default class App extends Component {
               <tr>
                 <td></td>
                 <td></td>
-                <td>${this.state.endingPrice.toLocaleString(undefined, { maximumFractionDigits: 2 })}</td>
+                <td>${this.state.endingPrice.toFixed(2)}</td>
                 <td>-</td>
-                <td>${this.state.initialPrice.toLocaleString(undefined, { maximumFractionDigits: 2 })}</td>
+                <td>${this.state.initialPrice.toFixed(2)}</td>
                 <td>+</td>
-                <td>${this.state.dividend.toLocaleString(undefined, { maximumFractionDigits: 2 })}</td>
+                <td>${this.state.dividend.toFixed(2)}</td>
                 <td></td>
               </tr>
               <tr>
@@ -83,7 +86,7 @@ export default class App extends Component {
               </tr>
               <tr>
                 <td colSpan="3"></td>
-                <td colSpan="3">${this.state.initialPrice.toLocaleString(undefined, { maximumFractionDigits: 2 })}</td>
+                <td colSpan="3">${this.state.initialPrice.toFixed(2)}</td>
                 <td colSpan="2"></td>
               </tr>
             </tbody>
