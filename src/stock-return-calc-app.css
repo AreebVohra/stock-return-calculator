@@ -1,18 +1,8 @@
-.App {
+.stock-return-calc-app {
   text-align: center;
   font-size: medium;
   font-weight: bold;
   font-style: italic;
-}
-
-h2 {
-  font-size: 150%;
-  font-family: sans-serif;
-  font-weight: bold;
-  text-align: center;
-  color: #884F06;
-  padding-top: 20px;
-  margin-bottom: 50px;
 }
 
 div.table-1 {

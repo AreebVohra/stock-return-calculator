@@ -39,8 +39,7 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <h2>Total Stock Return Calculator</h2>
+      <div className="stock-return-calc-app">
         <div className="table-1">
           <table>
             <tbody>
